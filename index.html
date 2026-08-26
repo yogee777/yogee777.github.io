@@ -1,10 +1,1065 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Yogesh Website</title>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Official personal website of Yogesh. Professional profile, experience, projects, skills and contact information.">
+
+    <meta name="author" content="Yogesh">
+
+    <title>Yogesh | Official Website</title>
+
+    <style>
+
+        /* ================================
+           BASIC RESET
+        =================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background: #f5f7fa;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        /* ================================
+           NAVIGATION
+        =================================== */
+
+        header {
+            background: #0b1f3a;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 15px 25px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #4fc3f7;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #4fc3f7;
+        }
+
+
+        /* ================================
+           HERO SECTION
+        =================================== */
+
+        .hero {
+            min-height: 88vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    rgba(11,31,58,0.90),
+                    rgba(20,55,90,0.90)
+                );
+
+            color: white;
+
+            padding: 60px 20px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            font-size: 26px;
+            font-weight: normal;
+            color: #4fc3f7;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: auto;
+            opacity: 0.95;
+        }
+
+        .buttons {
+            margin-top: 35px;
+        }
+
+        .btn {
+            display: inline-block;
+
+            padding: 13px 28px;
+
+            margin: 5px;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #4fc3f7;
+            color: #0b1f3a;
+        }
+
+        .btn-primary:hover {
+            background: white;
+        }
+
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #0b1f3a;
+        }
+
+
+        /* ================================
+           GENERAL SECTIONS
+        =================================== */
+
+        section {
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: #0b1f3a;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+
+        /* ================================
+           ABOUT
+        =================================== */
+
+        .about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .profile-photo {
+            width: 240px;
+            height: 240px;
+
+            margin: auto;
+
+            border-radius: 50%;
+
+            background: #e9eef5;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 70px;
+            color: #0b1f3a;
+
+            border: 8px solid #f5f7fa;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.12);
+        }
+
+        .about-text h3 {
+            font-size: 28px;
+            color: #0b1f3a;
+            margin-bottom: 15px;
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+
+        /* ================================
+           EXPERIENCE
+        =================================== */
+
+        .experience {
+            background: #f5f7fa;
+        }
+
+        .timeline {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .timeline-item {
+            background: white;
+
+            margin-bottom: 25px;
+
+            padding: 25px;
+
+            border-left: 5px solid #4fc3f7;
+
+            border-radius: 8px;
+
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        }
+
+        .timeline-item h3 {
+            color: #0b1f3a;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item .date {
+            color: #4a90b8;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+
+        /* ================================
+           SKILLS
+        =================================== */
+
+        .skills {
+            background: white;
+        }
+
+        .skills-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+
+            gap: 25px;
+        }
+
+        .skill-card {
+            padding: 30px 20px;
+
+            text-align: center;
+
+            background: #f5f7fa;
+
+            border-radius: 10px;
+
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .skill-card .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .skill-card h3 {
+            color: #0b1f3a;
+            margin-bottom: 8px;
+        }
+
+        .skill-card p {
+            color: #666;
+            font-size: 14px;
+        }
+
+
+        /* ================================
+           PROJECTS
+        =================================== */
+
+        .projects {
+            background: #f5f7fa;
+        }
+
+        .project-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 25px;
+        }
+
+        .project-card {
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 4px 15px rgba(0,0,0,0.06);
+
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            color: #0b1f3a;
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            color: #666;
+        }
+
+
+        /* ================================
+           GALLERY
+        =================================== */
+
+        .gallery {
+            background: white;
+        }
+
+        .gallery-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+
+            gap: 20px;
+        }
+
+        .gallery-box {
+            height: 180px;
+
+            background: #e9eef5;
+
+            border-radius: 10px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: #777;
+
+            font-size: 16px;
+        }
+
+
+        /* ================================
+           CONTACT
+        =================================== */
+
+        .contact {
+            background: #0b1f3a;
+            color: white;
+        }
+
+        .contact .section-title h2 {
+            color: white;
+        }
+
+        .contact .section-title p {
+            color: #cbd5e1;
+        }
+
+        .contact-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+
+            gap: 25px;
+
+            text-align: center;
+        }
+
+        .contact-card {
+            padding: 25px;
+        }
+
+        .contact-card .icon {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        .contact-card h3 {
+            margin-bottom: 8px;
+        }
+
+        .contact-card p {
+            color: #d5dce5;
+        }
+
+
+        /* ================================
+           FOOTER
+        =================================== */
+
+        footer {
+            background: #071426;
+
+            color: #b8c2cf;
+
+            text-align: center;
+
+            padding: 25px 15px;
+
+            font-size: 14px;
+        }
+
+
+        /* ================================
+           MOBILE MENU / RESPONSIVE
+        =================================== */
+
+        @media (max-width: 768px) {
+
+            .nav-container {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero h2 {
+                font-size: 21px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+
+            section {
+                padding: 60px 15px;
+            }
+        }
+
+    </style>
 </head>
+
+
 <body>
-    <h1>Welcome to Yogesh's Website</h1>
-    <p>My GitHub Pages website is working!</p>
+
+
+<!-- ================================
+     NAVIGATION
+================================= -->
+
+<header>
+
+    <div class="nav-container">
+
+        <div class="logo">
+            YOGESH<span>.</span>
+        </div>
+
+        <nav>
+
+            <ul>
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#experience">Experience</a>
+                </li>
+
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- ================================
+     HERO
+================================= -->
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <h1>Yogesh</h1>
+
+        <h2>Professional Profile & Personal Website</h2>
+
+        <p>
+            Welcome to my official website.
+            This website provides information about my professional
+            journey, experience, skills, projects and areas of interest.
+        </p>
+
+        <div class="buttons">
+
+            <a href="#about"
+               class="btn btn-primary">
+                Explore My Profile
+            </a>
+
+            <a href="#contact"
+               class="btn btn-outline">
+                Contact Me
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     ABOUT
+================================= -->
+
+<section id="about" class="about">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>About Me</h2>
+
+            <p>
+                A brief introduction
+            </p>
+
+        </div>
+
+
+        <div class="about-grid">
+
+            <div>
+
+                <div class="profile-photo">
+                    Y
+                </div>
+
+            </div>
+
+
+            <div class="about-text">
+
+                <h3>Hello, I'm Yogesh</h3>
+
+                <p>
+                    Welcome to my personal website.
+                    This section can be used to introduce yourself,
+                    your professional background, achievements,
+                    interests and areas of expertise.
+                </p>
+
+                <p>
+                    You can replace this text with your own
+                    professional biography and career information.
+                </p>
+
+                <p>
+                    My goal is to continuously learn, contribute,
+                    and use technology and knowledge to create
+                    meaningful results.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     EXPERIENCE
+================================= -->
+
+<section id="experience" class="experience">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Professional Experience</h2>
+
+            <p>
+                Career journey and important roles
+            </p>
+
+        </div>
+
+
+        <div class="timeline">
+
+
+            <div class="timeline-item">
+
+                <h3>Professional Position</h3>
+
+                <div class="date">
+                    2020 – Present
+                </div>
+
+                <p>
+                    Add your current designation,
+                    organisation and major responsibilities here.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <h3>Previous Position</h3>
+
+                <div class="date">
+                    2015 – 2020
+                </div>
+
+                <p>
+                    Add information about your previous
+                    professional experience here.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <h3>Early Career</h3>
+
+                <div class="date">
+                    2010 – 2015
+                </div>
+
+                <p>
+                    Add your early career,
+                    education or other relevant experience.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     SKILLS
+================================= -->
+
+<section id="skills" class="skills">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Skills & Expertise</h2>
+
+            <p>
+                Areas of professional interest and expertise
+            </p>
+
+        </div>
+
+
+        <div class="skills-grid">
+
+
+            <div class="skill-card">
+
+                <div class="icon">
+                    💻
+                </div>
+
+                <h3>Technology</h3>
+
+                <p>
+                    Technology, digital systems
+                    and modern IT solutions.
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <div class="icon">
+                    🔐
+                </div>
+
+                <h3>Cyber Security</h3>
+
+                <p>
+                    Cyber security, cyber awareness
+                    and digital investigation.
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <div class="icon">
+                    📊
+                </div>
+
+                <h3>Data & Analysis</h3>
+
+                <p>
+                    Data analysis, reporting
+                    and decision support.
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <div class="icon">
+                    🎯
+                </div>
+
+                <h3>Management</h3>
+
+                <p>
+                    Planning, coordination,
+                    leadership and execution.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     PROJECTS
+================================= -->
+
+<section id="projects" class="projects">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Projects & Initiatives</h2>
+
+            <p>
+                Selected professional projects and initiatives
+            </p>
+
+        </div>
+
+
+        <div class="project-grid">
+
+
+            <div class="project-card">
+
+                <h3>Project One</h3>
+
+                <p>
+                    Add a short description of your
+                    important project or initiative.
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>Project Two</h3>
+
+                <p>
+                    Add details about another important
+                    project, achievement or initiative.
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>Project Three</h3>
+
+                <p>
+                    Add information about your work,
+                    research or professional contribution.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     GALLERY
+================================= -->
+
+<section id="gallery" class="gallery">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Gallery</h2>
+
+            <p>
+                Photos and important moments
+            </p>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+
+            <div class="gallery-box">
+                Photo 1
+            </div>
+
+            <div class="gallery-box">
+                Photo 2
+            </div>
+
+            <div class="gallery-box">
+                Photo 3
+            </div>
+
+            <div class="gallery-box">
+                Photo 4
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     CONTACT
+================================= -->
+
+<section id="contact" class="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Contact</h2>
+
+            <p>
+                Get in touch
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    📧
+                </div>
+
+                <h3>Email</h3>
+
+                <p>
+                    your-email@example.com
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    🌐
+                </div>
+
+                <h3>Website</h3>
+
+                <p>
+                    yogee777.github.io
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    📍
+                </div>
+
+                <h3>Location</h3>
+
+                <p>
+                    India
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     FOOTER
+================================= -->
+
+<footer>
+
+    <p>
+        © 2026 Yogesh. All Rights Reserved.
+    </p>
+
+    <p>
+        Designed and hosted with GitHub Pages.
+    </p>
+
+</footer>
+
+
 </body>
 </html>
