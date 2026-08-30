@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TeleDir Record Search</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px #ccc;
+        }
+
+        input {
+            padding: 10px;
+            width: 250px;
+            margin-right: 10px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background: #1976d2;
+            color: white;
+        }
+
+        button:hover {
+            background: #125ca5;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 25px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background: #eee;
+        }
+
+        #message {
+            margin-top: 20px;
+            color: #d00;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Search JSON Records</h2>
+
+    <input
+        type="text"
+        id="searchName"
+        placeholder="Enter name"
+    >
+
+    <input
+        type="text"
+        id="searchMobile"
+        placeholder="Enter mobile"
+    >
+
+    <button onclick="searchRecords()">Search</button>
+    <button onclick="loadRecords()">Show All</button>
+
+    <div id="message"></div>
+
+    <table id="resultTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Mobile</th>
+            </tr>
+        </thead>
+
+        <tbody id="resultBody">
+        </tbody>
+    </table>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
